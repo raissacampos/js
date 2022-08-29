@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonte</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+    
+    body{
+        background-color: #F2C4D0;
+        font-family: 'Roboto Slab';
+    }
+    button{
+        background-color: blueviolet;
+        color: white;
+       height: 30px;
+       width: 80px;
+       text-align: center;
+
+
+    }
+    h1{
+        text-align: center;
+    }
+</style>
+<body>
+    
+    <h1>Dias, meses e anos da sua vida</h1>
+    <button onclick="Ok()">Calcule</button>
+ 
+
+    <script>
+        function Ok(){
+            var nome = window.prompt('Digite seu nome')
+            var idade = Number(window.prompt('Digite sua idade'))
+            var atual = new Date().getFullYear()
+            var sub = atual - idade
+            var dia = idade * 365
+            var meses = idade *12
+            document.write(`<h2 style= "color: #F2C4D0" >O ano que você nasceu é ${sub}, `)
+            document.write(`os dias que você viveu é ${dia},`)
+            document.write(`os meses que você viveu é ${meses}`)
+        }
+    </script>
+</body>
+</html>
